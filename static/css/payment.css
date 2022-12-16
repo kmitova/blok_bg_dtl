@@ -1,0 +1,92 @@
+.payment-container {
+
+  margin: auto;
+  margin-top: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+    border: 9px solid rgba(163, 163, 163, .5);
+    border-radius: 10px;
+    padding: 2em;
+    gap: 1em;
+}
+
+.fee-details {
+  border-right: 1px solid rgba(163, 163, 163, .5);
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1.5em;
+  /* border: 1px solid red; */
+}
+
+.deadline {
+  color: black;
+  text-align: center;
+}
+.fee-details-content {
+  text-align: center;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+label {
+  font-weight: bold;
+}
+
+.total-amount-content {
+  font-weight: bold;
+  text-align: right;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  padding-bottom: .8em;
+}
+
+.form-item input {
+  border: 1px solid rgba(163, 163, 163, .5);
+  border-radius: 4px;
+
+}
+
+.pay-btn {
+  background-color: #0284c7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: medium;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 9em;
+  height: 3em;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .payment-container {
+    flex-direction: column;
+  }
+    .fee-details {
+      border-bottom: 1px solid rgba(163, 163, 163, .5);
+      border-right: none;
+    }
+
+}

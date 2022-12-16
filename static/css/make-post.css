@@ -1,0 +1,39 @@
+.post-form, .edit-post-form {
+    padding: 3em;
+  border: 9px solid rgba(163, 163, 163, .5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: auto;
+  margin-top: 5em;
+
+}
+
+.item textarea {
+  resize: none;
+}
+
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .5em;
+}
+
+.upload-btn, .edit-btn {
+  border-color: #22c55e;
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+}
+
+
+
+@media (max-width: 800px) {
+  form {
+    width: 90%;
+  }
+}

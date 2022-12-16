@@ -1,0 +1,61 @@
+.container {
+  height: 100%;
+  width: 100vw;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-family: 'Montserrat', sans-serif;
+}
+.edit-form {
+  padding: 3em;
+  border: 9px solid rgba(163, 163, 163, .5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: auto;
+  margin-top: 5em;
+
+
+}
+
+.item {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  margin: auto;
+}
+
+.item input {
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  margin: .7em;
+
+}
+
+.save-btn {
+  background-color: #22c55e;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: medium;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 9em;
+  height: 3em;
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+  .item{
+    flex-direction: column;
+  }
+}

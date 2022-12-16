@@ -1,0 +1,40 @@
+.container-404 {
+  height: 100%;
+  width: 100%;
+  padding-top: 8em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.error-img {
+  width: 400px;
+}
+.error-name {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.return-link {
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+}
+
+
+@media (max-width: 800px) {
+  .left-side {
+    margin-top: 5em;
+  }
+  .right-side {
+    flex-direction: column-reverse;
+  }
+}

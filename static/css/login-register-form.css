@@ -1,0 +1,78 @@
+.form-container {
+    height: 100%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+button {
+    width: 6em;
+}
+
+
+input, button {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.accounts-form-title {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.form-field {
+    margin: .5em 0;
+
+}
+.form-field input {
+    width: 15em;
+    height: 3em;
+    font-size: 1rem;
+    text-indent: .4em;
+    border-radius: 5px;
+    border: 2px solid #d1d5db;
+}
+.submit-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accounts-form-btn  {
+    margin-top: 1em;
+    color: white;
+    background-color: #22c55e;
+    border: none;
+    width: 6em;
+    height: 3em;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.link-for-admin-accounts {
+    margin-right: -1.4em;
+    margin-top: 1.3em;
+    margin-bottom: -1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.link-for-admin-accounts a {
+    text-decoration: none;
+    color: white;
+    background-color: #a3a3a3;
+    font-size: .9rem;
+    padding: .2em;
+    border-radius: 2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}

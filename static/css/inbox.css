@@ -1,0 +1,98 @@
+.inbox-container {
+  height: 100%;
+  width: 100%;
+  padding-top: 4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.inbox-search-form {
+  display: flex;
+  flex-direction: row;
+  /* align-items: ce; */
+  gap: .3em;
+  justify-content: flex-start;
+
+}
+
+.inbox-search-btn {
+
+      background-color: #22c55e;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: medium;
+      border-radius: 7px;
+      display: block;
+      margin: auto;
+      width: 3.2em;
+      height: 3.2em;
+      cursor: pointer;
+      /* border: 2px solid blue; */
+      margin-left: 0;
+
+
+}
+
+.messages-search {
+  margin-right: 0;
+}
+
+.message-img {
+  width: 50px;
+  max-width: 50px;
+  min-width: 50px;
+}
+
+.message-title {
+  display: flex;
+  align-items: center;
+  gap: .4em;
+  text-align: center;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+  border-bottom: 1px solid rgba(163, 163, 163, .5);
+  margin-bottom: 1em;
+  background-color: rgba(163, 163, 163, .1);
+  padding: .4em;
+  cursor: pointer;
+  /* max-width: 50%; */
+}
+
+.message-title-and-content {
+  margin-right: auto;
+}
+
+.messages-list {
+  width: 70%;
+  margin: auto;
+}
+
+.message-date {
+  font-size: small;
+}
+
+.message-sender {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .inbox-container {
+    margin: 0;
+    display: block;
+  }
+
+  .messages-list {
+    width: 90%;
+  }
+}

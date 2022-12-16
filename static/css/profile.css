@@ -1,0 +1,156 @@
+.container {
+  height: 100%;
+  width: 100vw;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-container {
+  padding: 3em;
+  border: 9px solid rgba(163, 163, 163, .5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 5em;
+
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  color: black;
+}
+
+h5 {
+  text-align: center;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: .8em;
+}
+
+.edit-btn {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.edit-btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+
+
+.edit-btn:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.edit-btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.edit-btn:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.delete-btn {
+  appearance: none;
+  background-color: #ef4444;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.delete-btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+
+.delete-btn:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.delete-btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.delete-btn:active {
+  background-color: #ef4444;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+
+.message-btn {
+    background-color: #22c55e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: medium;
+      border-radius: 5px;
+      display: block;
+      margin: auto;
+      width: 9em;
+      height: 3em;
+      cursor: pointer;
+}
