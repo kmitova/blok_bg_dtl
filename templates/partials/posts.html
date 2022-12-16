@@ -6,20 +6,20 @@
     <div class="div" style="margin-top: 2em; display: flex; flex-direction: column; align-items: center;">
         <div>
             {% if posts.has_previous %}
-                <a href="?page=1">&laquo First</a>
-                <a href="?page={{ posts.previous_page_number }}">Previous</a>
+                <a href="?page=1">&laquo Първа стр.</a>
+                <a href="?page={{ posts.previous_page_number }}">Предишна стр.</a>
 
             {% endif %}
-            Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+            Стр. {{ posts.number }} от {{ posts.paginator.num_pages }}
 
             {% if posts.has_next %}
-                <a href="?page={{ posts.next_page_number }}">Next</a>
-                <a href="?page={{ posts.paginator.num_pages }}">Last &raquo</a>
+                <a href="?page={{ posts.next_page_number }}">Следваща стр.</a>
+                <a href="?page={{ posts.paginator.num_pages }}">Последна стр. &raquo</a>
 
             {% endif %}
         </div>
     {% if not posts %}
-        <h2>No Posts Yet.</h2>
+        <h2>Още няма публикации.</h2>
     {% else %}
     {% for post in posts %}
             <div class="post-container" style="width: 60%; margin:auto; padding: 1em; margin-top:2em;">
@@ -63,7 +63,7 @@
                         </div>
                         <p class="comments-count" onClick={handleClickComments}>
                             <a href="" data-bs-toggle="collapse" data-bs-target="#comments">
-                                <span class="comments-num">{{ post.comment_set.count }}</span> comments
+                                <span class="comments-num">{{ post.comment_set.count }}</span> коментара
                             </a>
                         </p>
                     </div>
@@ -82,7 +82,7 @@
                             {% csrf_token %}
                             <div class="post-actions">
                                 <button class="make-comment-btn">
-                                    Post
+                                    Публикувай
                                 </button>
                             </div>
                         </form>

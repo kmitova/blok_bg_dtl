@@ -7,11 +7,13 @@
 {% block page-content %}
     <div class="container">
       <div class="verify-container">
-        <h2 class="verify-title">Before deleting your profile, please verify that it's you:</h2>
+        <h2 class="verify-title">Преди да изтриете профила си, моля потвърдете, че това сте вие:</h2>
         <form action="{% url 'delete profile' pk=request.user.pk %}" method="post" class="delete-profile-form">
             {% csrf_token %}
             {{ form }}
-            <button class="verify-btn">Verify and Delete</button>
+
+{#            {{ form.confirm_password }}#}
+            <button class="verify-btn" style="width: 20em;">Потвърждаване и изтриване</button>
         </form>
       </div>
     </div>

@@ -7,6 +7,10 @@ class PostBaseForm(forms.ModelForm):
     class Meta:
         model = Post
         exclude = ('publication_date', 'user')
+        labels = {
+            'content': 'Текст',
+            'photo': 'Снимка'
+        }
 
 
 class PostCreateForm(PostBaseForm):
@@ -64,7 +68,7 @@ class CommentForm(forms.ModelForm):
         widgets = {
             'text': forms.TextInput(
                 attrs={
-                    'placeholder': 'Add a comment...',
+                    'placeholder': 'Кометирай...',
                 }
             )}
 
@@ -88,7 +92,7 @@ class ReplyForm(forms.ModelForm):
         widgets = {
             'text': forms.TextInput(
                 attrs={
-                    'placeholder': 'Add a reply...',
+                    'placeholder': 'Отговори...',
                 }
             )}
 
@@ -97,3 +101,7 @@ class AnnouncementForm(forms.ModelForm):
     class Meta:
         model = Announcement
         fields = ('title', 'content')
+        labels = {
+            'title': 'Заглавие',
+            'content': 'Текст'
+        }

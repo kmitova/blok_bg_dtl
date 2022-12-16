@@ -4,13 +4,13 @@
 
 {% block page-content %}
 <div class="edit-post-form">
-        <h2 style="text-align:center">Are you sure you want to delete this reply?</h2>
+        <h2 style="text-align:center">Сигурни ли сте, че искате да изтриете своя отговор?</h2>
         <form method="post" action="{% url 'delete reply' reply_id=reply_id %}" enctype="multipart/form-data">
             <div class="item" style="display:none;">
                 {{ form.text }}
             </div>
             <div class="edit-btn-div" style="display:flex; align-items: center;">
-                <button class="edit-btn" type="submit" style="margin: auto;">Delete Reply</button>
+                <button class="edit-btn" type="submit" style="margin: auto; width: 15em;">Изтриване на отговора</button>
             </div>
             {% csrf_token %}
         </form>

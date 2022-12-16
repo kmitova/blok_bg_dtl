@@ -5,44 +5,44 @@
 {% block page-content %}
     <div class="form-container">
 
-    <h1 class="accounts-form-title">Sign Up</h1>
+    <h1 class="accounts-form-title">Регистриране</h1>
     <form action="{% url 'register' %}" method="post" class="account-form login-form">
         {% csrf_token %}
         <div class="form-field">
             {{ form.first_name.errors }}
-            {{ form.first_name|placeholder:"First Name" }}
+            {{ form.first_name|placeholder:"Име" }}
         </div>
     <div class="form-field">
         {{ form.last_name.errors }}
-        {{ form.last_name|placeholder:"Last Name" }}
+        {{ form.last_name|placeholder:"Фамилия" }}
         </div>
     <div class="form-field">
         {{ form.username.errors }}
-        {{ form.username|placeholder:"Username" }}
+        {{ form.username|placeholder:"Потребителско име" }}
         </div>
     <div class="form-field">
         {{ form.email.errors }}
-        {{ form.email|placeholder:"Email" }}
+        {{ form.email|placeholder:"Имейл" }}
         </div>
     <div class="form-field">
         {{ form.building_code.errors }}
-        {{ form.building_code|placeholder:"Building Code" }}
+        {{ form.building_code|placeholder:"Код на сградата" }}
         </div>
     <div class="form-field">
         {{ form.password1.errors }}
-        {{ form.password1|placeholder:"Password" }}
+        {{ form.password1|placeholder:"Парола" }}
         </div>
     <div class="form-field">
             {{ form.password2.errors }}
-        {{ form.password2|placeholder:"Confirm Password" }}
+        {{ form.password2|placeholder:"Потвърди паролата" }}
     </div>
         <div class="submit-btn-container">
-                <button type="submit" class="accounts-form-btn register-btn">Sign Up</button>
+                <button type="submit" class="accounts-form-btn register-btn" style="width: 10em;">Регистрирай се</button>
 
         </div>
     </form>
     <div class="link-for-admin-accounts">
-        <a href="{% url 'register admin' %}">Sign Up for Admins</a>
+        <a href="{% url 'register admin' %}">Регистрация за домоуправители</a>
     </div>
     </div>
 {% endblock %}

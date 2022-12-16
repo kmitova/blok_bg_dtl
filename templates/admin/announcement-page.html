@@ -4,10 +4,10 @@
 
 {% block page-content %}
     <form action="{% url 'make announcement' %}" method="post" class="announcement-form">
-    <h2>New Announcement:</h2>
+    <h2>Ново съобщение:</h2>
     {{ form }}
     {% csrf_token %}
-    <button type="submit">Make Announcement</button>
+    <button type="submit" style="width:15em;">Направи съобщение</button>
     </form>
 {% endblock %}
 

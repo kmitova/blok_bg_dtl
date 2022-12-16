@@ -13,21 +13,20 @@
                 <h5>@{{ object.username }}</h5>
             </div>
             <div class="profile-info">
-                <h4>Posts: <span class="total-posts">{{ posts_count }}</span></h4>
-                <h4>Member since: <span class="member-since">{{ date_joined }}</span></h4>
-                <h4>Lives at: blok <span class="blok-number">{{ blok_number }}</span> apartment <span
+                <h4>Постове: <span class="total-posts">{{ posts_count }}</span></h4>
+                <h4>Членува от: <span class="member-since">{{ date_joined }}</span></h4>
+                <h4>Живее в: блок <span class="blok-number">{{ blok_number }}</span> апартамент <span
                         class="apartment-number">{{ object.apartment_number }}</span></h4>
 
             </div>
 
                 {% if is_owner %}
                 <div class="edit-delete-buttons">
-                    <a class="edit-btn" role="button" href="{% url 'posts page' %}" style="background-color: #0284c7">Posts</a>
+                    <a class="edit-btn" role="button" href="{% url 'posts page' %}" style="background-color: #0284c7">Вашите постове</a>
 
-                    <a class="edit-btn" role="button" href="{% url 'edit profile' pk=object.pk %}">Edit Profile</a>
+                    <a class="edit-btn" role="button" href="{% url 'edit profile' pk=object.pk %}">Редактирай профила</a>
 
-                    <a class="delete-btn" role="button" href="{% url 'delete profile' pk=object.pk %}">Delete
-                        Profile</a>
+                    <a class="delete-btn" role="button" href="{% url 'delete profile' pk=object.pk %}">Изтрий профила</a>
                 </div>
             {% endif %}
         </div>

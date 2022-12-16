@@ -10,7 +10,8 @@ from django.views import generic as views
 from django.contrib.auth import views as auth_views
 from django.views.generic import DetailView, UpdateView
 
-from accounts.forms import UserCreateForm, UserLoginForm, AdminUserCreateForm, DeleteProfileForm
+from accounts.forms import UserCreateForm, UserLoginForm, AdminUserCreateForm, DeleteProfileForm, \
+    CustomPasswordChangeForm
 from core.utils import get_date_joined
 
 UserModel = get_user_model()
@@ -28,7 +29,7 @@ class AdminUserRegisterView(views.CreateView):
     model = UserModel
     form_class = AdminUserCreateForm
     template_name = 'accounts/register-admin.html'
-    success_url = reverse_lazy('login admin')
+    success_url = reverse_lazy('login')
 
 
 class UserLoginView(auth_views.LoginView):
@@ -81,18 +82,19 @@ class DeleteProfileView(UpdateView):
         return self.request.user
 
 
-def change_password(request):
+
+def change_password(request, pk):
     if request.method == 'POST':
-        form = PasswordChangeForm(request.user, request.POST)
+        form = CustomPasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)
-            messages.success(request, 'Your password was successfully updated!')
+            messages.success(request, 'Успешно променихте паролата си!')
             return redirect('home page')
         else:
-            messages.error(request, 'Please correct the error below.')
+            messages.error(request, 'Моля, поправете грешките.')
     else:
-        form = PasswordChangeForm(request.user)
+        form = CustomPasswordChangeForm(request.user)
 
     context = {
         'form': form

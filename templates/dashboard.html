@@ -9,13 +9,13 @@
         <div class="posts">
         <div class="users-modal">
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal">
-                Users in your group
+                Съседи
             </button>
             <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="ModalLabel">Your neighbors ({{ users_count }}):</h1>
+                            <h1 class="modal-title fs-5" id="ModalLabel">Вашите съседи ({{ users_count }}):</h1>
                         </div>
                         <div class="modal-body">
                             <ul>
@@ -48,11 +48,10 @@
 
         </div>
 
-
             {% if query_made and posts.count == 0 %}
-                <h2>No results</h2>
+                <h2>Няма резултати</h2>
             {% elif query_made and posts.count > 0 %}
-                <h2>Results: {{ posts.count }}</h2>
+                <h2>Резултати: {{ posts.count }}</h2>
             {% endif %}
             {% for post in posts %}
                 <div class="post-container">
@@ -95,7 +94,7 @@
                         </div>
                         <p class="comments-count" onClick={handleClickComments}>
                             <a href="" data-bs-toggle="collapse" data-bs-target="#comments">
-                                <span class="comments-num">{{ post.comment_set.count }}</span> comments
+                                <span class="comments-num">{{ post.comment_set.count }}</span> коментара
                             </a>
                         </p>
                     </div>
@@ -114,7 +113,7 @@
                             {% csrf_token %}
                             <div class="post-actions">
                                 <button class="make-comment-btn">
-                                    Post
+                                    Коментирай
                                 </button>
                             </div>
                         </form>

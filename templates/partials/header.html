@@ -5,14 +5,14 @@
         {% if user.is_authenticated %}
             <div class='title-logo' style="margin-right: 50%;">
                 <a href="{% url 'home page' %}" style="color:white; text-decoration: none"><h3
-                        style="display:flex; align-items: center;">BLOK
+                        style="display:flex; align-items: center;">БЛОК
                     <span>{{ building_number }} </span>
                     <i class="fa-regular fa-building fa-lg"></i>
                 </h3></a>
             </div>
         {% else %}
             <div class='title-logo'><a href="{% url 'landing page' %}" style="color:white; text-decoration: none;"><h3>
-                BLOK <span>bg</span>
+                БЛОК <span>bg</span>
 
                 <i class="fa-regular fa-building fa-lg" style="margin-top:.4em"></i>
             </h3></a>
@@ -26,9 +26,9 @@
             {% if user.is_authenticated %}
                 {% if is_dashboard %}
                     <form class="d-flex" role="search" method="get">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        <input class="form-control me-2" type="search" placeholder="Търси" aria-label="Search"
                                name="query">
-                        <button class="btn btn btn-outline-dark" type="submit">Search</button>
+                        <button class="btn btn btn-outline-dark" type="submit">Търсене</button>
                     </form>
                 {% endif %}
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display:flex; align-items:center;">
@@ -36,16 +36,20 @@
                         <a href="{% url 'make post' %}" style="color:white;"><i class="fa-solid fa-pen"></i></a>
                     </li>
                     <li class="nav-item" style="padding:1em;">
-                        <a href="{% url 'inbox' %}" style="color:white;"><i class="fa-solid fa-message fa-lg menu-icon"
+                        <a href="{% url 'inbox' %}" style="color:white; display:flex; align-items:center; text-decoration: none"><i class="fa-solid fa-message fa-lg menu-icon"
                                                                             id="message-icon" style="">
-                            {% if unread_count %}{{ unread_count }} {% endif %}</i>
+                            </i>
+                            <p>{% if unread_count %}{{ unread_count }} {% endif %}</p>
                         </a>
                     </li>
                     <li class="nav-item" style="padding:1em;">
-                        <a href="{% url 'notifications' %}" style="color:white; text-decoration: none;"><i
+                        <a href="{% url 'notifications' %}" style="color:white; text-decoration: none; display:flex; align-items:center"><i
                                 class="fa-solid fa-bell fa-lg menu-icon"
                                 id="bell-icon" style="">
-                            {% if unread_notifications %}{{ unread_notifications }}{% endif %}</i>
+{#                        <p>{% if unread_notifications %}{{ unread_notifications }}{% endif %}</p>#}
+
+                            </i>
+                            <p>{% if unread_notifications %}{{ unread_notifications }}{% endif %}</p>
                         </a>
                     </li>
                     <li class="nav-item dropdown" style="padding:1em;">
@@ -53,16 +57,16 @@
                                 aria-expanded="false" style="padding: 0.1em .5em;">
                             <i class="fa-solid fa-user fa-lg menu-icon" id="profile-icon"></i>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="margin-right: 1em;">
                             <ul>
-                                <li><a href="{% url 'profile page' pk=user.pk %}">Profile</a></li>
-                                <li><a href="{% url 'payment' %}">Payment</a></li>
+                                <li><a href="{% url 'profile page' pk=user.pk %}">Профил</a></li>
+                                <li><a href="{% url 'payment' %}">Плащане</a></li>
                                 {% if user.is_admin %}
-                                    <li><a href="{% url 'set payment' %}" class="open-modal-btn">Set Fee</a></li>
+                                    <li><a href="{% url 'set payment' %}" class="open-modal-btn">Промени такса</a></li>
 
-                                    <li><a href="{% url 'make announcement' %}">Make Announcement</a></li>
+                                    <li><a href="{% url 'make announcement' %}">Направи съобщение</a></li>
                                 {% endif %}
-                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                <li><a href="{% url 'logout' %}">Изход</a></li>
                             </ul>
                         </ul>
                     </li>

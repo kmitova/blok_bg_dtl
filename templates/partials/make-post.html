@@ -7,10 +7,10 @@
 
         <form action="{% url 'make post' %}" method="post" enctype="multipart/form-data"
                                   class="form post-form">
-            <h1>Write a post:</h1>
+            <h1>Напишете пост:</h1>
                 {% csrf_token %}
                 {{ form }}
-                <button type='submit' class="submit-post-btn">Post</button>
+                <button type='submit' class="submit-post-btn" style="width:10em">Публикувай</button>
         </form>
     </div>
 

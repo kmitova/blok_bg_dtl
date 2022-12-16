@@ -4,7 +4,7 @@
 
 {% block page-content %}
 <div class="edit-post-form">
-        <h2 style="text-align:center">Are you sure you want to delete this post?</h2>
+        <h2 style="text-align:center">Сигурни ли сте, че искате да изтриете своя пост?</h2>
 
         <form method="post" action="{% url 'delete post' post_id=post_id %}" enctype="multipart/form-data">
             <div class="item" style="display:none;">
@@ -14,7 +14,7 @@
                 {{ form.photo }}
             </div>
             <div class="edit-btn-div" style="display:flex; align-items: center;">
-                <button class="edit-btn" type="submit" style="margin: auto;">Delete Post</button>
+                <button class="edit-btn" type="submit" style="margin: auto; width: 15em;">Изтриване на поста</button>
             </div>
 
             {% csrf_token %}

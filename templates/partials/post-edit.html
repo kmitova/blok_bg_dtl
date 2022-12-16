@@ -4,7 +4,7 @@
 
 {% block page-content %}
 <div class="edit-post-form">
-        <h2>Edit Post</h2>
+        <h2>Редактирай пост</h2>
         <form method="post" action="{% url 'edit post' post_id=post_id %}" enctype="multipart/form-data">
             <div class="item">
                 {{ form.content }}
@@ -13,7 +13,7 @@
                 {{ form.photo }}
             </div>
             <div class="edit-btn-div" style="display:flex; align-items: center;">
-                <button class="edit-btn" type="submit" style="margin: auto;">Edit Post</button>
+                <button class="edit-btn" type="submit" style="margin: auto; width: 15em;">Редактиране</button>
             </div>
 
             {% csrf_token %}

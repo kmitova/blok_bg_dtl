@@ -10,9 +10,11 @@ urlpatterns = (
     path('register-admin/', AdminUserRegisterView.as_view(), name='register admin'),
     path('profile/<int:pk>/', include([
         path('', ProfileDetailsView.as_view(), name="profile page"),
-        path('edit/', ProfileEditView.as_view(), name="edit profile"),
         path('change-password/', change_password, name='change password'),
+
+        path('edit/', ProfileEditView.as_view(), name="edit profile"),
         path('delete/', DeleteProfileView.as_view(), name="delete profile"),
 
     ])),
+    # path('change-password/', change_password, name='change password'),
 )

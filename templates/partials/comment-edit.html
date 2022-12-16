@@ -4,13 +4,13 @@
 
 {% block page-content %}
 <div class="edit-post-form">
-        <h2>Edit Comment</h2>
+        <h2>Редакция на коментара</h2>
         <form method="post" action="{% url 'edit comment' comment_id=comment_id %}" enctype="multipart/form-data">
             <div class="item">
                 {{ form.text }}
             </div>
             <div class="edit-btn-div" style="display:flex; align-items: center;">
-                <button class="edit-btn" type="submit" style="margin: auto;">Edit Comment</button>
+                <button class="edit-btn" type="submit" style="margin: auto; width:15em;">Редактирай коментара</button>
             </div>
 
             {% csrf_token %}

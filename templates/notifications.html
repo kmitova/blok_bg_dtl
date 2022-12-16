@@ -5,9 +5,9 @@
 {% block page-content %}
 
     <div class="notifications-container">
-      <h2 class="notifications-title">Notifications <i class="fa-solid fa-bell"></i></h2>
+      <h2 class="notifications-title">Известия <i class="fa-solid fa-bell"></i></h2>
     {% if not notifications %}
-        <h4>No notifications yet.</h4>
+        <h4>Още няма известия.</h4>
     {% else %}
       <ul class="notifications-list">
           {% for notification in notifications %}
@@ -24,15 +24,15 @@
     {% endif %}
     {% if notifications %}
         {% if notifications.has_previous %}
-                <a href="?page=1">&laquo First</a>
-                <a href="?page={{ notifications.previous_page_number }}">Previous</a>
+                <a href="?page=1">&laquo Първа стр.</a>
+                <a href="?page={{ notifications.previous_page_number }}">Предишна стр.</a>
 
             {% endif %}
-            Page {{ notifications.number }} of {{ notifications.paginator.num_pages }}
+            Стр. {{ notifications.number }} от {{ notifications.paginator.num_pages }}
 
             {% if notifications.has_next %}
-                <a href="?page={{ notifications.next_page_number }}">Next</a>
-                <a href="?page={{ notifications.paginator.num_pages }}">Last &raquo</a>
+                <a href="?page={{ notifications.next_page_number }}">Следваща стр.</a>
+                <a href="?page={{ notifications.paginator.num_pages }}">Последна стр. &raquo</a>
 
             {% endif %}
     {% endif %}

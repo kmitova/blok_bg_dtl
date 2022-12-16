@@ -6,7 +6,7 @@
     <form action="{% url 'set payment' %}" method="post" class="set-payment-form">
     {{ form }}
     {% csrf_token %}
-    <button type="submit">Set fee</button>
+    <button type="submit" style="width: 10em;">Определи такса</button>
     </form>
 {% endblock %}
 

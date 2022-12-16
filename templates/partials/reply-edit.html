@@ -4,15 +4,14 @@
 
 {% block page-content %}
 <div class="edit-post-form">
-        <h2>Edit Reply</h2>
+        <h2>Редактирай отговор</h2>
         <form method="post" action="{% url 'edit reply' reply_id=reply_id %}" enctype="multipart/form-data">
             <div class="item">
                 {{ form.text }}
             </div>
             <div class="edit-btn-div" style="display:flex; align-items: center;">
-                <button class="edit-btn" type="submit" style="margin: auto;">Edit Reply</button>
+                <button class="edit-btn" type="submit" style="margin: auto; width: 15em;">Редактиране</button>
             </div>
-
             {% csrf_token %}
         </form>
 

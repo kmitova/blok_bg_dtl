@@ -7,40 +7,40 @@
     <div class="profile-container">
               <form action="{% url 'edit profile' pk=object.pk %}" method="post" enctype="multipart/form-data" class="form post-form" class="edit-form">
         {% csrf_token %}
-          <h2>Edit Profile:</h2>
+          <h2>Редактирай профила:</h2>
         <div class="item">
-            <label For="first-name">First Name:</label>
+            <label For="first-name">Име:</label>
             {{ form.first_name.errors }}
             {{ form.first_name }}
         </div>
         <div class="item">
-          <label for="last-name">Last Name:</label>
+          <label for="last-name">Фамилия:</label>
             {{ form.last_name.errors }}
             {{ form.last_name }}
         </div>
           <div class="item">
-          <label for="apartment-number">Apartment Number:</label>
+          <label for="apartment-number">Номер на апартаментr:</label>
             {{ form.apartment_number }}
         </div>
         <div class="item">
-          <label for="username">Username:</label>
+          <label for="username">Потребителско име:</label>
             {{ form.username.errors }}
             {{ form.username }}
         </div>
         <div class="item">
-          <label for="email">Email:</label>
+          <label for="email">Имейл:</label>
             {{ form.email.errors }}
             {{ form.email }}
         </div>
           <div class="item">
-          <label for="profile-picture">Profile Picture:</label>
+          <label for="profile-picture">Профилна снимка:</label>
             {{ form.profile_picture }}
         </div>
         <div class="item">
-          <label for="password">Password:</label>
-            <a href="{% url 'change password' pk=object.pk %}">Change password</a>
+          <label for="password">Парола:</label>
+            <a href="{% url 'change password' pk=object.pk %}">Промени паролата</a>
         </div>
-        <button class="save-btn">Save Changes</button>
+        <button class="save-btn">Запази промените</button>
       </form>
 
     </div>

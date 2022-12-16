@@ -43,7 +43,7 @@ class AppUser(AbstractUser):
     )
 
     apartment_number = models.CharField(
-        default='not specified',
+        default='',
         max_length=20,
         null=True,
         blank=True,

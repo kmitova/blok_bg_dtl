@@ -234,7 +234,7 @@ def comment_post(request, post_id):
         if comment.user.pk != post.user.pk:
             Notification.objects.create(user=post.user,
                                         sender=comment.user,
-                                        content=f"{comment.user.first_name} {comment.user.last_name} commented on your post.")
+                                        content=f"{comment.user.first_name} {comment.user.last_name} коментира вашата публикация.")
 
     return redirect('home page')
 
@@ -254,7 +254,7 @@ def reply_to_comment(request,  post_id, comment_id):
         if reply.user.pk != comment.user.pk:
             Notification.objects.create(user=comment.user,
                                         sender=reply.user,
-                                        content=f"{reply.user.first_name} {reply.user.last_name} replied to your comment.")
+                                        content=f"{reply.user.first_name} {reply.user.last_name} отговори на вашия коментар.")
 
     return redirect('home page')
 
@@ -295,7 +295,7 @@ def make_announcement(request):
                 if user != post.user:
                     Notification.objects.create(user=user,
                                                 sender=request.user,
-                                                content=f"Announcement from admin {request.user.first_name} {request.user.last_name}: "
+                                                content=f"Съобщение от вашия домоуправител: {request.user.first_name} {request.user.last_name}: "
                                                         f"{post.title}: \n "
                                                         f"{post.content}")
 
@@ -318,7 +318,7 @@ def support_post(request, post_id):
     if post.user.pk != request.user.pk:
         Notification.objects.create(user=post.user,
                                     sender=request.user,
-                                    content=f"{request.user.first_name} {request.user.last_name} supported your post.")
+                                    content=f"{request.user.first_name} {request.user.last_name} подрепи вашата публикация.")
 
     return redirect(request.META['HTTP_REFERER'] + f'#{post_id}')
 

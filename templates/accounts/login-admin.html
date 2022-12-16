@@ -5,19 +5,19 @@
 {% block page-content %}
     <div class="form-container">
 
-        <h1 class="accounts-form-title">Admin Sign In</h1>
+        <h1 class="accounts-form-title">Вход за домоуправители</h1>
         <form method="post" action="{% url 'login admin' %}" class="account-form login-form">
             {% csrf_token %}
             <div class="form-field">
                 {{ form.username.errors }}
-                {{ form.username|placeholder:"Username" }}
+                {{ form.username|placeholder:"Потребителско име" }}
             </div>
             <div class="form-field">
                 {{ form.password.errors }}
-                {{ form.password|placeholder:"Password" }}
+                {{ form.password|placeholder:"Парола" }}
             </div>
             <div class="submit-btn-container">
-                <button type="submit" class="accounts-form-btn register-btn">Sign In</button>
+                <button type="submit" class="accounts-form-btn register-btn">Вход като домоуправител</button>
             </div>
         </form>
 

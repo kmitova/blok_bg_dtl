@@ -4,7 +4,7 @@
 
 {% block page-content %}
     <div class="chat-container">
-      <div class="go-back-arrow"><a href="{% url 'inbox' %}" class="go-back-arrow-a"><i class="fa-solid fa-arrow-left"></i>Back</a></div>
+      <div class="go-back-arrow"><a href="{% url 'inbox' %}" class="go-back-arrow-a"><i class="fa-solid fa-arrow-left"></i>Назад</a></div>
         <h2>{{ recipient.first_name }} {{ recipient.last_name }}</h2>
 
         <div class="chat-messages-container" id="chat-messages">
@@ -26,9 +26,9 @@
             {% csrf_token %}
             <input type="hidden" name="to_user" value="{{ active_direct }}">
 
-        <input id="outlined-basic" placeholder="Message" name="body" class="send-message"/>
+        <input id="outlined-basic" placeholder="Напиши съобщение" name="body" class="send-message"/>
         <div class="post-actions">
-          <button type="submit" class="send-chat-btn">Send</button>
+          <button type="submit" class="send-chat-btn">Изпрати</button>
         </div>
       </form>
       </div>

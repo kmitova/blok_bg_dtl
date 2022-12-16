@@ -6,17 +6,17 @@
     <div class="payment-container">
         <div class="fee-details">
             <h2 class="fee-details-content">
-                This month's fee is $<span class="fee-amount">{{ fee_amount }}</span>.
+                Таксата е <span class="fee-amount">{{ fee_amount }}</span> лв.
             </h2>
             <h3 class="deadline">
-                The deadline for payment is  {{ fee_deadline }}.
+                Срокът за плащане е  {{ fee_deadline }}.
             </h3>
         </div>
         <form action="{% url 'payment' %}" method="post" class="payment-form">
-            <h2>Pay monthly fee:</h2>
+            <h2>Плати:</h2>
                 <div class="form-items">
                     <div class="form-item">
-                        <label for="">Card number:</label>
+                        <label for="">Номер на карта:</label>
                         {{ form.card_number.errors }}
                         {{ form.card_number }}
                     </div>
@@ -33,12 +33,12 @@
                     </div>
                     <div class="total-amount-container">
                         <h4 class="total-amount-content">
-                            Total: $<span class="total-to-pay">{{ fee_amount }}</span>
+                            Общо: <span class="total-to-pay">{{ fee_amount }}</span>лв.
                         </h4>
                     </div>
                 </div>
                 {% csrf_token %}
-                <button class="pay-btn" type="submit">Pay now</button>
+                <button class="pay-btn" type="submit">Плати сега</button>
         </form>
     </div>
 

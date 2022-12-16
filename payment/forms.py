@@ -10,6 +10,10 @@ class SetFeeForm(forms.ModelForm):
     class Meta:
         model = Fee
         fields = '__all__'
+        labels = {
+            'fee': 'Такса',
+            'deadline': 'Срок на плащане'
+        }
 
 
 class PaymentForm(forms.ModelForm):
@@ -17,7 +21,7 @@ class PaymentForm(forms.ModelForm):
         model = Payment
         fields = ("card_number", "card_cvv", "card_expiry_date")
         labels = {
-            'card_expiry_date': 'Card Expiry Date (YYYY-mm-dd)',
+            'card_expiry_date': 'Срок на валидност (YYYY-mm-dd)',
         }
         # card_expiry_date = forms.DateField(
         #
