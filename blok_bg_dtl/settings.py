@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import environ
 from django.urls import reverse_lazy
@@ -13,9 +14,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# ALLOWED_HOSTS = ['*']
-
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # EMAIL CONFIG
 EMAIL_HOST = env('EMAIL_HOST')
@@ -158,6 +157,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'staticfiles/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [BASE_DIR / 'staticfiles']
 
 MEDIA_URL = '/media/'
