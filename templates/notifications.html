@@ -12,7 +12,7 @@
       <ul class="notifications-list">
           {% for notification in notifications %}
         <li class="notification-item">
-            <div class="notification-img"><img src="{{ notification.sender.profile_picture.url }}" alt="" style="width: 40px; height: 40px" /></div>
+            <div class="notification-img"><img src="{{ notification.sender.profile_picture.url }}" alt="img of {{ notification.sender.username }}" style="width: 40px; height: 40px" /></div>
             <div class="notif-title-and-content">
               <p class="notif-title">{{ notification.content }}</p>
               <p class="notif-date">{{ notification.date }}</p>
