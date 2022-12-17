@@ -62,14 +62,14 @@ def send_message(request):
 @login_required
 def chat_page(request, username):
     user = request.user
-    messages = ChatMessage.get_messages(user=user)
+    recipient = UserModel.objects.filter(username=username).get()
+    messages = ChatMessage.objects.filter(user=user, recipient=recipient).order_by('date')
     active_direct = username
     directs = ChatMessage.objects.filter(user=user, recipient__username=username)
     directs.update(is_read=True)
-    recipient = UserModel.objects.filter(username=username).get()
 
     for message in messages:
-        if message['user'].username == username:
+        if message.user.username == username:
             message['unread'] = 0
 
     context = {

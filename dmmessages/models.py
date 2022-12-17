@@ -4,14 +4,6 @@ from django.db.models import Max
 
 UserModel = get_user_model()
 
-# class Chat(models.Model):
-#     # user1 = models.ForeignKey(UserModel, on_delete=models.RESTRICT, )
-#     #
-#     # user2 = models.ForeignKey(UserModel, on_delete=models.RESTRICT, )
-#     members = models.ManyToManyField(UserModel)
-#     slug = models.SlugField(
-#         unique=True,
-#     )
 
 
 class ChatMessage(models.Model):
@@ -22,9 +14,6 @@ class ChatMessage(models.Model):
     body = models.CharField(
         max_length=255,
         null=True,
-
-        # null=False,
-        # blank=False,
     )
 
     date = models.DateTimeField(auto_now_add=True)
