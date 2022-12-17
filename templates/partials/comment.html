@@ -6,7 +6,7 @@
 
         <div class="user-img">
             <a href="{% url 'profile page' pk=comment.user.pk %}">
-                <img src="{{ comment.user.profile_picture.url }}" alt="image of {{ user.username }}" class="profile-pic-comment">
+                <img src="{{ comment.user.profile_picture.url }}" alt="image of {{ comment.user.username }}" class="profile-pic-comment">
             </a>
         </div>
         <div class="comment-user-and-date">
@@ -54,7 +54,7 @@
                     <div class="user-img">
                         <a href="{% url 'profile page' pk=reply.user.pk %}">
 
-                                    <img src="{{ reply.user.profile_picture.url }}" alt="image of {{ user.username }}" class="profile-pic-reply">
+                                    <img src="{{ reply.user.profile_picture.url }}" alt="image of {{ reply.user.username }}" class="profile-pic-reply">
                         </a>
                     </div>
                     <div class="reply-user-and-date">

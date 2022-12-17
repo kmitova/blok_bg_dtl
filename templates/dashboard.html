@@ -65,7 +65,7 @@
                     <div class="post-info">
                         <div class="user-img">
                             <a href="{% url 'profile page' pk=post.user.pk %}">
-                                <img src="{{ post.user.profile_picture.url }}" alt="image of {{ user.username }}"
+                                <img src="{{ post.user.profile_picture.url }}" alt="image of {{ post.user.username }}"
                                      class="profile-pic-user">
                             </a>
                         </div>

@@ -12,7 +12,7 @@
           <h3 class="chat-title">{{ direct.sender.first_name }} {{ direct.sender.last_name }}</h3>
             {% for direct in messages %}
           <div class="{% if direct.sender.pk == request.user.pk %}chat-message chat-right {% else %} chat-message chat-left {% endif %}">
-            <img src="{{ sender.profile_picture.url }}" alt="" class="chat-sender-img"/>
+            <img src="{{ sender.profile_picture.url }}" alt="img of {{ sender.username }}" class="chat-sender-img"/>
             <div class="chat-message-content-div">
               <p class="chat-message-content">{{ direct.body }}</p>
               <p class="name-of-chat-sender">{{ direct.sender.first_name }} {{ direct.sender.last_name }}</p>
