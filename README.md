@@ -3,6 +3,8 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 
+ENGLISH VERSION: https://github.com/kmitova/blok_bg_dtl_eng
+
 ## Please read before using Blok.bg:
 To try out the project, and see how an already made group works, register with code 1165 as the building code.
 If you register with another code, you will create another separate group. The last 2 or 3 numbers of the building code are the building's number.
